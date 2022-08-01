@@ -47,7 +47,7 @@ UsersModel::data(const QModelIndex &index, int role) const
                          .replace("[", "\\[")
                          .replace("]", "\\]")
                          .toHtmlEscaped(),
-                       QString(QUrl::toPercentEncoding(userids[index.row()])));
+                       QString(userids[index.row()]));
             else
                 return displayNames[index.row()];
         case CompletionModel::SearchRole:
